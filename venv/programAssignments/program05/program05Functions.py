@@ -16,4 +16,4 @@ def getNumAuthors():
     numAuthors = int(input("Please enter the number of authors to process\n"))
     return numAuthors
 
-def getAuthorInfo():
+
