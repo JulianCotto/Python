@@ -6,22 +6,29 @@
 ####################################################################
 from program05Functions import intro
 from program05Functions import getNumAuthors
-from program05Functions import getAuthorInfo
+from program05Functions import getAuthorDetails
+from program05Functions import getAuthorBookDetails
+
 
 def main() -> None:
-    # object to be filled during program execution and displayed at the end
-    displayObject = {}
-    continueLoop = 0
+    authorObject = {}
+    counter = 0
 
     print("Requirement 1\n")
     intro()
     print("Requirement 3\n")
     numAuthors = getNumAuthors()
     print("Requirement 4\n")
-    while continueLoop != -1:
-        displayObject = getAuthorInfo(displayObject, numAuthors)
-        continueLoop = int(input("Enter -1 to exit or any other number to continue\n"))
+    for i in range(0, numAuthors):
+        authorObject[i] = {}
+        authorObject[i]['authorName'], \
+        authorObject[i]['authorURL'] = getAuthorDetails()
 
+    for key in authorObject:
+        authorObject[key]['book_name_list'], \
+        authorObject[key]['book_isbn_list'], \
+        authorObject[key]['book_order_quantity_list'], counter = getAuthorBookDetails(authorObject, counter)
+        counter += 1
 
 
 if __name__ == '__main__':
