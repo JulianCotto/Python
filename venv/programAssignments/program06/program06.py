@@ -13,6 +13,7 @@ from program06Functions import displayRepEmails
 from program06Functions import experience
 from program06Functions import outro
 
+
 def main() -> None:
     weeks = ("Week One", "Week Two")
     days = ("Thursday", "Friday", "Saturday")

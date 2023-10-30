@@ -12,6 +12,7 @@ def intro():
     print("Requirement 2\n")
     print("This program uses lists, strings, tuples, and dictionaries.\n")
 
+
 def getSalesReps():
     salesReps = []
     salesRepLocations = []
@@ -38,15 +39,17 @@ def getBoatSales(salesReps, days, weeks):
         for j in range(len(salesReps)):
             for k in range(len(days)):
                 if days[k] == "Thursday":
-                    boatsSoldThursday.append(int(input("\nEnter the number of boats sold by " + salesReps[j] + " on " + days[k] + "\n")))
+                    boatsSoldThursday.append(
+                        int(input("\nEnter the number of boats sold by " + salesReps[j] + " on " + days[k] + "\n")))
                 elif days[k] == "Friday":
-                    boatsSoldFriday.append(int(input("Enter the number of boats sold by " + salesReps[j] + " on " + days[k] + "\n")))
+                    boatsSoldFriday.append(
+                        int(input("Enter the number of boats sold by " + salesReps[j] + " on " + days[k] + "\n")))
                 elif days[k] == "Saturday":
-                    boatsSoldSaturday.append(int(input("Enter the number of boats sold by " + salesReps[j] + " on " + days[k] + "\n")))
+                    boatsSoldSaturday.append(
+                        int(input("Enter the number of boats sold by " + salesReps[j] + " on " + days[k] + "\n")))
             print()
 
     return boatsSoldThursday, boatsSoldFriday, boatsSoldSaturday
-
 
 
 def displaySalesData(weeks, salesReps, boatsSoldThursday, boatsSoldFriday, boatsSoldSaturday):
@@ -57,12 +60,14 @@ def displaySalesData(weeks, salesReps, boatsSoldThursday, boatsSoldFriday, boats
             print(salesReps[j] + " Sold " + str(boatsSoldFriday[j]) + " on Friday")
             print(salesReps[j] + " Sold " + str(boatsSoldSaturday[j]) + " on Saturday\n")
 
+
 def getDealerURL(salesRepsLocations):
     dealerURLs = {}
     for i in range(len(salesRepsLocations)):
         uRL = str(input("Please Enter the Dealer URL for: " + salesRepsLocations[i] + "\n"))
         dealerURLs[i] = uRL
     return dealerURLs
+
 
 def displayRepEmails(dealerURL, salesReps):
     print("Contact Sales Reps at their Emails\n==================================\n")
@@ -72,10 +77,12 @@ def displayRepEmails(dealerURL, salesReps):
 
         print(email_name + "@" + dealerURL[i].lower() + "\n")
 
+
 def experience():
     print("Program06 was a fun exercise\n"
           "I enjoyed the use of the different data forms,\n"
           "I especially enjoy passing data between functions to accomplish a goal.\n")
+
 
 def outro():
     print("Thank you for running Program06 - Julian Cotto")
